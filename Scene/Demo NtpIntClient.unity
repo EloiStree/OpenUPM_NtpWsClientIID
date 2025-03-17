@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5065035088716849285, guid: 7031505544bc7a8499d504aee58766d0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5736457934621503199, guid: 7031505544bc7a8499d504aee58766d0, type: 3}
       propertyPath: m_websocketServer
@@ -480,11 +480,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 602462115898644618, guid: 4da294faec73769449efa92ac73d5060, type: 3}
       propertyPath: m_websocketServer
-      value: ws://apint.ddns.net:4615/
+      value: ws://apint.local:4615/
       objectReference: {fileID: 0}
     - target: {fileID: 602462115898644618, guid: 4da294faec73769449efa92ac73d5060, type: 3}
       propertyPath: m_networkTimeProtocolServer
-      value: apint.ddns.net
+      value: apint.local
       objectReference: {fileID: 0}
     - target: {fileID: 833864040646448547, guid: 4da294faec73769449efa92ac73d5060, type: 3}
       propertyPath: m_LocalPosition.x
