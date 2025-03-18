@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_serversNtp:
-  - raspberrypi4.local
+  - raspberrypi.local
   m_offsetInMilliseconds: 0
   m_loadAtAwake: 1
   m_timeInMilliseconds: 0

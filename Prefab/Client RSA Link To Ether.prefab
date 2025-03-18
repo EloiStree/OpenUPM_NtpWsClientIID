@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f92c9763085fe4fa5c6b636dc1178e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_networkTimeProtocolServer: apint.ddns.net
-  m_websocketServer: ws://apint.ddns.net:4615/
+  m_networkTimeProtocolServer: apint-home.ddns.net
+  m_websocketServer: ws://apint-home.ddns.net:4615/
   m_onNetworkTimeProtocolUpdated:
     m_PersistentCalls:
       m_Calls:
@@ -79,7 +79,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_relayAtAwake: 1
+      - m_Target: {fileID: 713216189423476101}
+        m_TargetAssemblyTypeName: Eloi.WsMetaMaskAuth.ConnectToServerTunnelingMetaMaskMono,
+          be.elab.metamaskauth
+        m_MethodName: CloseAndRelanchConnection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_relayAtAwake: 0
 --- !u!1001 &2475018098722102783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,6 +145,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ws Mask Auth Client RSA with ETH
       objectReference: {fileID: 0}
+    - target: {fileID: 8194677511903884215, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
+      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194677511903884215, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
+      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194677511903884215, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
+      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NotifyIntegerReceivedFromServer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194677511903884215, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
+      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Eloi.IntegerLobby.IntegerLobbyFacadeMono, be.elab.intlobby
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194677511903884215, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
+      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -153,6 +186,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 271254006254323520, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
   m_PrefabInstance: {fileID: 2475018098722102783}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8100489777566438370 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5923288285919677981, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
+  m_PrefabInstance: {fileID: 2475018098722102783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c2a01f6ea68734f94cf9fde50f1c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8926740045576053123 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6465798104635341948, guid: 211f197b076c13c44a75039ef27f8829, type: 3}
@@ -218,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
       propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
       propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -229,11 +273,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 713216189423476101}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
+      propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 8100489777566438370}
+    - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
       propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
       propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
+      propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
@@ -245,6 +297,10 @@ PrefabInstance:
       value: SetNtpOffsetLocalToServerMilliseconds
       objectReference: {fileID: 0}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
+      propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetNtpOffsetInMilliseconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
       propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Eloi.WsMetaMaskAuth.MaskAuthMono_PushNtpIntegerInTunnel, be.elab.metamaskauth
       objectReference: {fileID: 0}
@@ -253,11 +309,20 @@ PrefabInstance:
       value: Eloi.WsMetaMaskAuth.ConnectToServerTunnelingMetaMaskMono, be.elab.metamaskauth
       objectReference: {fileID: 0}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
+      propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Eloi.WsMetaMaskAuth.TDD_ReceivedFromConnectToRelayServerTunnelingMono,
+        be.elab.metamaskauth
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
       propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
       propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508779417224823916, guid: 834dc1935321142428b02030ba84b410, type: 3}
+      propertyPath: m_onNtpOffsetChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
