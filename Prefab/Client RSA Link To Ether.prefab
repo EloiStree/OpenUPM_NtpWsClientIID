@@ -43,11 +43,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5764171758055109655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1f92c9763085fe4fa5c6b636dc1178e, type: 3}
+  m_Script: {fileID: 11500000, guid: aa916ea828b464d42abad4f27d4de871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_networkTimeProtocolServer: apint-home.ddns.net
-  m_websocketServer: ws://apint-home.ddns.net:4615/
+  m_networkTimeProtocolServer: apint.ddns.net
+  m_websocketServer: ws://apint.ddns.net:4615/
   m_onNetworkTimeProtocolUpdated:
     m_PersistentCalls:
       m_Calls:
@@ -67,8 +67,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 713216189423476101}
-        m_TargetAssemblyTypeName: Eloi.WsMetaMaskAuth.ConnectToServerTunnelingMetaMaskMono,
-          be.elab.metamaskauth
+        m_TargetAssemblyTypeName: Eloi.WsAsymAuth.WsConnectToAsymServerMono, be.elab.wsasymauth
         m_MethodName: SetWebsocketUrlWS
         m_Mode: 0
         m_Arguments:
@@ -79,20 +78,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 713216189423476101}
-        m_TargetAssemblyTypeName: Eloi.WsMetaMaskAuth.ConnectToServerTunnelingMetaMaskMono,
-          be.elab.metamaskauth
-        m_MethodName: CloseAndRelanchConnection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_relayAtAwake: 0
+  m_relayAtAwake: 1
 --- !u!1001 &2475018098722102783
 PrefabInstance:
   m_ObjectHideFlags: 0
